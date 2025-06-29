@@ -1,0 +1,126 @@
+.faq-section {
+  padding: 80px 0;
+  background-color: var(--bg); 
+  text-align: center;
+}
+
+.faq-section .section-subtitle {
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.faq-section .section-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--dark); 
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.faq-section .section-description {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--gray); 
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+.faq-accordion {
+  max-width: 800px; /* Limite la largeur de l'accordéon pour une seule colonne */
+  margin: 0 auto; /* Centre l'accordéon */
+}
+
+.faq-item {
+  background-color: var(--light); /* Fond blanc ou très clair */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Ombre subtile */
+  margin-bottom: 15px; /* Espace entre les éléments FAQ */
+  overflow: hidden;
+  text-align: left;
+}
+
+.faq-item details {
+  padding: 20px 25px; /* Padding interne pour chaque élément */
+  border-bottom: 1px solid var(--gray-lightest); /* Bordure discrète entre les éléments */
+}
+
+.faq-item details:last-child {
+  border-bottom: none; /* Pas de bordure pour le dernier élément */
+}
+
+.faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.15rem; /* Taille de police légèrement ajustée */
+  font-weight: 600;
+  color: var(--dark); /* Couleur foncée pour le texte de la question */
+  cursor: pointer;
+  outline: none;
+  /* padding: 0; */ /* Le padding est maintenant sur details */
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none; /* Cache le marqueur par défaut */
+}
+
+.faq-item summary::after {
+  content: '▼'; 
+  font-size: 1.2rem;
+  color: var(--primary); 
+  transition: transform 0.3s ease;
+  margin-left: 10px; 
+}
+
+.faq-item details[open] summary::after {
+  transform: rotate(180deg); 
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--gray-lightest);
+}
+
+@media (max-width: 1024px) {
+  .faq-section .section-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 20px;
+  }
+
+  .faq-section .section-title {
+    font-size: 2.5rem;
+  }
+
+  .faq-section .section-description {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .faq-item details {
+    padding: 18px 20px;
+  }
+
+  .faq-item summary {
+    font-size: 1rem;
+  }
+
+  .faq-item p {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+}

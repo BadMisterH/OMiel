@@ -1,0 +1,270 @@
+/* General Body and Font Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8; /* Light background */
+    color: #333;
+    line-height: 1.6;
+}
+
+
+  background: rgba(255, 255, 255, 0.30); /* translucide blanc */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+/* Header Styling */
+.main-header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between nav items */
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #FFC107; /* Highlight color for hover */
+}
+
+.main-nav .btn-discover {
+    background-color: #9C83FF; /* Purple button background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px; /* Pill shape */
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav .btn-discover:hover {
+    background-color: #7a60e0;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    background-color: #fff; /* White background */
+    padding: 80px 0;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.hero-content {
+    flex: 1; /* Allows content to grow */
+    min-width: 300px; /* Minimum width before wrapping */
+    text-align: left;
+}
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Ensure padding applies correctly */
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #FFC107; /* Orange button */
+    color: #333;
+    border: 2px solid transparent; /* To match secondary button border */
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+.hero-features {
+    display: flex;
+    gap: 25px;
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 500;
+    flex-wrap: wrap; /* Allow features to wrap */
+}
+
+.hero-image {
+    flex: 1; /* Allows image container to grow */
+    min-width: 300px; /* Minimum width before wrapping */
+    text-align: center;
+}
+
+.honey-jar-3d {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+    display: block; /* Remove extra space below image */
+    margin: 0 auto; /* Center image if it doesn't take full width */
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .main-header .main-nav ul {
+        gap: 20px;
+    }
+
+    .hero-container {
+        flex-direction: column; /* Stack content and image */
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        order: 2; /* Put content below image on small screens if desired, or remove for default */
+    }
+
+    .hero-image {
+        order: 1; /* Put image above content on small screens */
+        margin-bottom: 40px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        justify-content: center; /* Center buttons when stacked */
+    }
+
+    .hero-features {
+        justify-content: center; /* Center features when stacked */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 15px 0;
+    }
+    .header-container {
+        flex-direction: column; /* Stack logo and nav */
+        gap: 15px;
+    }
+    .main-nav ul {
+        flex-wrap: wrap; /* Allow nav items to wrap */
+        justify-content: center;
+        gap: 15px;
+    }
+    .main-nav .btn-discover {
+        margin-top: 10px; /* Space out button */
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    .hero-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+    .hero-features {
+        flex-direction: column; /* Stack features vertically */
+        gap: 10px;
+    }
+}

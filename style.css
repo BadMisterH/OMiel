@@ -1327,6 +1327,7 @@ h1 {
   margin: 0 auto;
   z-index: 1;
   position: relative;
+  margin-bottom: 80px;
 }
 
 .info-card {

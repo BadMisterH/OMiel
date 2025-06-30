@@ -1252,7 +1252,7 @@ h1 {
     0.15
   ); /* Slightly darker translucent white */
   max-width: 700px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 0px auto;
   padding: 30px;
   border-radius: 20px;
   display: flex;

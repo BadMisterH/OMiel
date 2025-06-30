@@ -1439,39 +1439,6 @@ h1 {
   }
 }
 
-.testimonials-section .container,
-.trust-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* Common Section Header Styles */
-.section-subtitle {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.section-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2.8rem;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.section-description {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto 50px auto;
-  line-height: 1.8;
-  text-align: center;
-}
-
 /* Testimonials Section */
 .testimonials-section {
   background-color: #fff; /* White background for this section */
@@ -1907,10 +1874,7 @@ h1 {
   .main-header {
     padding: 15px 0;
   }
-  .header-container {
-    flex-direction: column; /* Stack logo and nav */
-    gap: 15px;
-  }
+
   .main-nav ul {
     flex-wrap: wrap; /* Allow nav items to wrap */
     justify-content: center;
@@ -1954,6 +1918,60 @@ h1 {
   .hero-features {
     flex-direction: column; /* Stack features vertically */
     gap: 10px;
+  }
+}
+
+/* Burger menu styles */
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+
+.burger-menu img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Overlay styles */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background: var(--light);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1001;
+  }
+
+  .main-nav.open {
+    right: 0;
+  }
+
+  .overlay.active {
+    display: block;
   }
 }
 

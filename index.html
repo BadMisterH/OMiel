@@ -667,6 +667,31 @@
       },
     });
 
+    // --- FAQ Section (Apparition au scroll) ---
+    gsap.from(".faq-section .section-subtitle, .faq-section .section-title, .faq-section .section-description", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".faq-section",
+        start: "top 80%",
+      },
+    });
+
+    gsap.from(".faq-item", {
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".faq-accordion", // Le conteneur des éléments FAQ
+        start: "top 85%",
+      },
+    });
+
     // --- Newsletter Section ---
     gsap.from(".newsletter-section .top-indicator, .newsletter-section .section-title, .newsletter-section .section-description", {
       y: 50,

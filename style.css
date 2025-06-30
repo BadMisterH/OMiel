@@ -1874,11 +1874,15 @@ h1 {
   .main-header {
     padding: 15px 0;
   }
-
+  .header-container {
+    gap: 15px;
+  }
   .main-nav ul {
-    flex-wrap: wrap; /* Allow nav items to wrap */
+    display: flex;
+    height: 100vh;
     justify-content: center;
     gap: 15px;
+    flex-direction: column;
   }
   .main-nav .btn-discover {
     margin-top: 10px; /* Space out button */
@@ -1936,6 +1940,21 @@ h1 {
   height: 30px;
 }
 
+/* Close button styles */
+.close-menu {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--dark);
+  cursor: pointer;
+  z-index: 1002;
+}
+
 /* Overlay styles */
 .overlay {
   display: none;
@@ -1971,6 +1990,10 @@ h1 {
   }
 
   .overlay.active {
+    display: block;
+  }
+
+  .close-menu {
     display: block;
   }
 }

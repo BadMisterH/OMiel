@@ -59,6 +59,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 20px;
+  text-align: center;
 }
 
 /* 3D Model Container (for miel-3d-container) */
@@ -1312,7 +1313,6 @@ h1 {
   gap: 30px;
   max-width: 1000px; /* Limit width of card grid */
   margin: 0 auto;
-  padding-top: 50px; /* Space above cards */
   z-index: 1;
   position: relative;
 }
